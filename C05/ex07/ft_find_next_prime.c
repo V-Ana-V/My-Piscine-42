@@ -1,50 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 18:03:18 by avelikan          #+#    #+#             */
-/*   Updated: 2023/11/08 17:40:05 by avelikan         ###   ########.fr       */
+/*   Created: 2023/11/08 13:16:22 by avelikan          #+#    #+#             */
+/*   Updated: 2023/11/08 13:28:42 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 
-int	ft_sqrt(int nb)
+int	ft_is_prime(int nb)
 {
-	int	x1;
-	int	x2;
-	int	m;
+	int	x;
 
-	if (nb < 0)
-		return (0);
-	x1 = 1;
-	x2 = nb;
-	while (x1 <= x2)
+	if (nb < 2)
 	{
-		m = x1 + ((x2 - x1) / 2);
-		if (m == nb / m && nb % m == 0)
-			return (m);
-		if (m <= nb / m)
-			x1 = m + 1;
-		else
-			x2 = m - 1;
+		return (0);
 	}
-	return (0);
+	x = 2;
+	while (x <= nb / x)
+	{
+		if (nb % x == 0)
+			return (0);
+		x++;
+	}
+	return (1);
+}
+
+int	ft_find_next_prime(int nb)
+{
+	int	n;
+
+	n = nb;
+	{
+		while (!(ft_is_prime(n)))
+			n++;
+		return (n);
+	}
 }
 /*
 int	main(void)
 {
-	int	nb;
-
-	nb = 0;
-	while (nb < 101)
-	{
-		printf("For nb =  %d ft_sqrt returns %d\n", nb, ft_sqrt(nb));
-		nb++;
-	}
+	printf("Next prime is %d\n", ft_find_next_prime(2147483645));
 	return (0);
 }
 */
