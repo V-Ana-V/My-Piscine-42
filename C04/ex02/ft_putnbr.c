@@ -6,12 +6,12 @@
 /*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 18:02:33 by avelikan          #+#    #+#             */
-/*   Updated: 2023/11/04 19:59:42 by avelikan         ###   ########.fr       */
+/*   Updated: 2023/11/05 14:54:24 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-//#include <stdio.h>
+#include <stdio.h>
 
 void	print_digit(unsigned int digit)
 {
@@ -79,10 +79,9 @@ void	ft_putnbr(int nb)
 		i++;
 	}
 }
-/*
+
 int	main(void)
 {
-	ft_putnbr(0);
+	ft_putnbr(678);
 	return (0);
 }
-*/
