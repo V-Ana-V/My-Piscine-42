@@ -6,7 +6,7 @@
 /*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 13:14:40 by avelikan          #+#    #+#             */
-/*   Updated: 2023/11/08 18:49:44 by avelikan         ###   ########.fr       */
+/*   Updated: 2023/11/09 12:49:13 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 
 	i = 0;
 	l_all = count_length(size, strs, sep);
-	final = (char *) malloc((l_all + 1) * sizeof(char));
+	final = malloc((l_all + 1) * sizeof(char));
 	if (final == 0)
 		return (0);
 	*final = '\0';

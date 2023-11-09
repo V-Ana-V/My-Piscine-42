@@ -6,7 +6,7 @@
 /*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:32:53 by avelikan          #+#    #+#             */
-/*   Updated: 2023/11/08 17:53:20 by avelikan         ###   ########.fr       */
+/*   Updated: 2023/11/09 12:41:01 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ int	ft_ultimate_range(int **range, int min, int max)
 	l = (max - min);
 	if (l <= 0)
 	{
-		*range = 0;
+		*range = NULL;
 		return (0);
 	}
-	*range = (int *) malloc(l * sizeof(int));
+	*range = malloc(l * sizeof(int));
 	if (*range == 0)
 		return (-1);
 	while (i < l)
